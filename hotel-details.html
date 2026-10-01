@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hotel Details | StayEase</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+      <div class="logo">Stay<span>Ease</span></div>
+
+      <nav>
+        <a href="index.html"> Home </a>
+
+        <a href="index.html#hotels"> Hotels </a>
+
+        <a href="index.html#about"> About </a>
+
+        <a href="index.html#contact"> Contact </a>
+      </nav>
+    </header>
+
+    <!-- ================= HOTEL DETAILS ================= -->
+
+    <main class="hotel-details-page">
+      <!-- BREADCRUMB -->
+
+      <div class="details-container breadcrumb">
+        <a href="index.html"> Home </a>
+
+        <span>›</span>
+
+        <a href="index.html#hotels"> Hotels </a>
+
+        <span>›</span>
+
+        <span id="breadcrumbName"> Hotel Details </span>
+      </div>
+
+      <!-- HOTEL HEADER -->
+
+      <section class="hotel-detail-header">
+        <div class="details-container">
+          <div class="hotel-heading-row">
+            <div>
+              <span class="verified-property">
+                <i class="fa-solid fa-circle-check"></i>
+                Verified Property
+              </span>
+
+              <h1 id="detailName">Hotel Name</h1>
+
+              <p class="detail-location">
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span id="detailLocation"> Location </span>
+
+                <a href="#location"> View map </a>
+              </p>
+            </div>
+
+            <div class="detail-rating">
+              <strong id="detailRating"> 4.8 </strong>
+
+              <div>
+                <b> Excellent </b>
+
+                <span id="detailReviews"> 250 reviews </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= GALLERY ================= -->
+
+      <section class="hotel-gallery-section">
+        <div class="details-container">
+          <div class="details-gallery">
+            <div class="gallery-main">
+              <img id="detailMainImage" src="" alt="Hotel" />
+            </div>
+
+            <div class="gallery-side">
+              <img id="detailImage2" src="" alt="Hotel" />
+
+              <img id="detailImage3" src="" alt="Hotel" />
+
+              <img id="detailImage4" src="" alt="Hotel" />
+
+              <div class="gallery-overlay">
+                <span>
+                  <i class="fa-solid fa-images"></i>
+                  View photos
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTENT ================= -->
+
+      <div class="details-container details-grid">
+        <!-- ================= LEFT ================= -->
+
+        <div class="details-content">
+          <!-- ABOUT -->
+
+          <section class="hotel-info-section">
+            <span class="detail-label"> ABOUT THIS HOTEL </span>
+
+            <h2>About this property</h2>
+
+            <p id="detailAbout"></p>
+
+            <p id="detailAbout2"></p>
+          </section>
+
+          <!-- HIGHLIGHTS -->
+
+          <section class="hotel-info-section">
+            <span class="detail-label"> PROPERTY HIGHLIGHTS </span>
+
+            <h2>Popular facilities</h2>
+
+            <div class="detail-amenities" id="detailAmenities"></div>
+          </section>
+
+          <!-- FACILITIES -->
+
+          <section class="hotel-info-section">
+            <span class="detail-label"> FACILITIES </span>
+
+            <h2>Facilities & services</h2>
+
+            <div class="facility-grid">
+              <div class="facility-group">
+                <h3>
+                  <i class="fa-solid fa-utensils"></i>
+                  Food & Drink
+                </h3>
+
+                <ul>
+                  <li>Restaurants</li>
+
+                  <li>Bars & lounges</li>
+
+                  <li>Room service</li>
+
+                  <li>Breakfast</li>
+                </ul>
+              </div>
+
+              <div class="facility-group">
+                <h3>
+                  <i class="fa-solid fa-spa"></i>
+                  Wellness
+                </h3>
+
+                <ul>
+                  <li>Full-service spa</li>
+
+                  <li>Swimming pool</li>
+
+                  <li>Fitness center</li>
+
+                  <li>Sauna</li>
+                </ul>
+              </div>
+
+              <div class="facility-group">
+                <h3>
+                  <i class="fa-solid fa-car"></i>
+                  Parking & Transport
+                </h3>
+
+                <ul>
+                  <li>Parking available</li>
+
+                  <li>Valet parking</li>
+
+                  <li>Airport transportation</li>
+                </ul>
+              </div>
+
+              <div class="facility-group">
+                <h3>
+                  <i class="fa-solid fa-bell-concierge"></i>
+                  Services
+                </h3>
+
+                <ul>
+                  <li>24-hour front desk</li>
+
+                  <li>Concierge</li>
+
+                  <li>Housekeeping</li>
+
+                  <li>Laundry service</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- ROOMS -->
+
+          <section class="hotel-info-section" id="rooms">
+            <span class="detail-label"> ROOMS </span>
+
+            <h2>Rooms & rates</h2>
+
+            <p class="section-description">
+              Choose a room that matches your stay.
+            </p>
+
+            <div id="roomsContainer"></div>
+          </section>
+
+          <!-- REVIEWS -->
+
+          <section class="hotel-info-section" id="reviews">
+            <span class="detail-label"> GUEST REVIEWS </span>
+
+            <h2>Guest reviews</h2>
+
+            <div class="review-summary">
+              <div class="review-score">
+                <strong id="reviewScore"> 4.7 </strong>
+
+                <span> Excellent </span>
+
+                <small id="reviewCount"> 250 reviews </small>
+              </div>
+
+              <div class="review-bars">
+                <div>
+                  <span> Cleanliness </span>
+
+                  <div>
+                    <i style="width: 95%"></i>
+                  </div>
+
+                  <b> 4.8 </b>
+                </div>
+
+                <div>
+                  <span> Location </span>
+
+                  <div>
+                    <i style="width: 96%"></i>
+                  </div>
+
+                  <b> 4.8 </b>
+                </div>
+
+                <div>
+                  <span> Service </span>
+
+                  <div>
+                    <i style="width: 94%"></i>
+                  </div>
+
+                  <b> 4.7 </b>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-cards">
+              <article class="review-card">
+                <div class="review-top">
+                  <div class="review-avatar">A</div>
+
+                  <div>
+                    <strong> Guest </strong>
+
+                    <span> Recent stay </span>
+                  </div>
+                </div>
+
+                <div class="review-stars">★★★★★</div>
+
+                <p>
+                  Guests appreciate the service, rooms, location and overall
+                  hotel experience.
+                </p>
+              </article>
+
+              <article class="review-card">
+                <div class="review-top">
+                  <div class="review-avatar">R</div>
+
+                  <div>
+                    <strong> Guest </strong>
+
+                    <span> Recent stay </span>
+                  </div>
+                </div>
+
+                <div class="review-stars">★★★★★</div>
+
+                <p>
+                  The location is convenient for shopping, dining and exploring
+                  the city.
+                </p>
+              </article>
+
+              <article class="review-card">
+                <div class="review-top">
+                  <div class="review-avatar">S</div>
+
+                  <div>
+                    <strong> Guest </strong>
+
+                    <span> Recent stay </span>
+                  </div>
+                </div>
+
+                <div class="review-stars">★★★★★</div>
+
+                <p>
+                  Comfortable rooms and good facilities make the stay
+                  convenient.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <!-- LOCATION -->
+
+          <section class="hotel-info-section" id="location">
+            <span class="detail-label"> LOCATION </span>
+
+            <h2>Where you'll stay</h2>
+
+            <div class="address-box">
+              <i class="fa-solid fa-location-dot"></i>
+
+              <div>
+                <strong id="detailHotelAddress"> </strong>
+
+                <p id="detailAddress"></p>
+              </div>
+            </div>
+
+            <div class="map-box">
+              <iframe id="hotelMap" loading="lazy" allowfullscreen> </iframe>
+            </div>
+
+            <a
+              id="googleMapLink"
+              class="google-map-link"
+              href="#"
+              target="_blank"
+            >
+              <i class="fa-solid fa-map"></i>
+
+              Open in Google Maps
+            </a>
+
+            <h3 class="nearby-title">Nearby places</h3>
+
+            <div class="nearby-grid">
+              <div>
+                <strong> Shopping </strong>
+
+                <span> Nearby shopping areas </span>
+              </div>
+
+              <div>
+                <strong> Restaurants </strong>
+
+                <span> Dining options nearby </span>
+              </div>
+
+              <div>
+                <strong> Airport </strong>
+
+                <span> Convenient city access </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- PARKING & INTERNET -->
+
+          <section class="hotel-info-section">
+            <span class="detail-label"> AMENITIES </span>
+
+            <h2>Parking & Internet</h2>
+
+            <div class="parking-internet">
+              <div>
+                <i class="fa-solid fa-square-parking"></i>
+
+                <h3>Parking</h3>
+
+                <p id="parkingDetails"></p>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-wifi"></i>
+
+                <h3>Internet</h3>
+
+                <p id="internetDetails"></p>
+              </div>
+            </div>
+          </section>
+
+          <!-- POLICIES -->
+
+          <section class="hotel-info-section" id="policies">
+            <span class="detail-label"> POLICIES </span>
+
+            <h2>Hotel policies</h2>
+
+            <div class="policy-grid" id="policyContainer"></div>
+          </section>
+
+          <!-- ACCESSIBILITY -->
+
+          <section class="hotel-info-section">
+            <span class="detail-label"> ACCESSIBILITY </span>
+
+            <h2>Accessibility features</h2>
+
+            <div class="accessibility-grid" id="accessibilityContainer"></div>
+
+            <p class="accessibility-note">
+              Accessibility features may vary depending on room type and
+              availability.
+            </p>
+          </section>
+        </div>
+
+        <!-- ================= RIGHT BOOKING CARD ================= -->
+
+        <aside class="booking-sidebar">
+          <div class="booking-box">
+            <span class="best-rate"> BEST AVAILABLE RATE </span>
+
+            <div class="booking-price">
+              <small> Starting from </small>
+
+              <strong id="detailPrice"> ₹0 </strong>
+
+              <span> / night </span>
+            </div>
+
+            <label> Check-in </label>
+
+            <input type="date" id="detailCheckIn" />
+
+            <label> Check-out </label>
+
+            <input type="date" id="detailCheckOut" />
+
+            <label> Guests </label>
+
+            <select id="detailGuests">
+              <option>1 Guest</option>
+
+              <option selected>2 Guests</option>
+
+              <option>3 Guests</option>
+
+              <option>4 Guests</option>
+
+              <option>5 Guests</option>
+            </select>
+
+            <button class="availability-btn" onclick="checkHotelAvailability()">
+              Check Availability
+            </button>
+
+            <p class="booking-note">
+              <i class="fa-solid fa-shield-halved"></i>
+
+              Demo booking system
+            </p>
+          </div>
+
+          <div class="quick-links">
+            <a href="#rooms">
+              <i class="fa-solid fa-bed"></i>
+              Rooms & Rates
+            </a>
+
+            <a href="#reviews">
+              <i class="fa-solid fa-star"></i>
+              Reviews
+            </a>
+
+            <a href="#location">
+              <i class="fa-solid fa-location-dot"></i>
+              Location
+            </a>
+
+            <a href="#policies">
+              <i class="fa-solid fa-file-lines"></i>
+              Policies
+            </a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2>Stay<span>Ease</span></h2>
+
+          <p>Discover comfortable stays and unforgettable experiences.</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2026 StayEase. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
